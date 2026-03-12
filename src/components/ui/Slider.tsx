@@ -18,7 +18,7 @@ export function Slider({ label, value, config, onChange }: SliderProps) {
           {value.toFixed(config.step < 1 ? 1 : 0)} {config.unit}
         </div>
       </div>
-      <div className="relative pt-1">
+      <div className="relative flex items-center">
         <input
           type="range"
           min={config.min}
@@ -26,7 +26,7 @@ export function Slider({ label, value, config, onChange }: SliderProps) {
           step={config.step}
           value={value}
           onChange={(e) => onChange(parseFloat(e.target.value))}
-          className="slider"
+          className="slider w-full"
           style={{
             background: `linear-gradient(to right, #9ca3af 0%, #9ca3af ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`,
           }}
