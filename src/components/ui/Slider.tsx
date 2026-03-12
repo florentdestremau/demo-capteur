@@ -13,8 +13,8 @@ export function Slider({ label, value, config, onChange }: SliderProps) {
   return (
     <div className="space-y-2">
       <div className="flex justify-between items-center">
-        <label className="text-sm font-medium text-slate-300">{label}</label>
-        <div className="text-sm text-cyan-400 font-semibold">
+        <label className="text-sm font-medium text-slate-700">{label}</label>
+        <div className="text-sm text-slate-600 font-semibold">
           {value.toFixed(config.step < 1 ? 1 : 0)} {config.unit}
         </div>
       </div>
@@ -28,7 +28,7 @@ export function Slider({ label, value, config, onChange }: SliderProps) {
           onChange={(e) => onChange(parseFloat(e.target.value))}
           className="slider"
           style={{
-            background: `linear-gradient(to right, #06b6d4 0%, #06b6d4 ${percentage}%, rgba(255, 255, 255, 0.1) ${percentage}%, rgba(255, 255, 255, 0.1) 100%)`,
+            background: `linear-gradient(to right, #9ca3af 0%, #9ca3af ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`,
           }}
         />
       </div>
