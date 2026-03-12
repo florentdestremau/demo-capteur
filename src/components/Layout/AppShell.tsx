@@ -52,7 +52,7 @@ export function AppShell() {
           {/* Main Content Area - Responsive, scrolls only if needed */}
           {activeTab === 'rotor' && (
             <div className="flex flex-col gap-4">
-              <GlassCard className="h-96 lg:h-[500px]">
+              <GlassCard className="h-72 lg:h-96">
                 <RotorSVG params={params} />
               </GlassCard>
               <RotorInfoCard
