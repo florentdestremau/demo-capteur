@@ -10,11 +10,11 @@ export function RotorSVG({ params }: RotorSVGProps) {
   const airGapPixels = (params.airGap / 5) * 20; // Scale for visualization
 
   return (
-    <div className="flex items-center justify-center h-full">
+    <div className="flex items-center justify-center h-full w-full overflow-hidden">
       <svg
         viewBox="0 0 500 500"
         className="rotor-svg"
-        style={{ maxWidth: '600px', maxHeight: '600px', width: '100%' }}
+        style={{ width: '100%', height: '100%' }}
       >
         <defs>
           {/* Gradient for rotor disc */}

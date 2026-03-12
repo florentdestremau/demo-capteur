@@ -52,7 +52,7 @@ export function AppShell() {
           {/* Main Content Area - Responsive, scrolls only if needed */}
           {activeTab === 'rotor' && (
             <div className="flex flex-col gap-4">
-              <GlassCard className="h-72 lg:h-96">
+              <GlassCard className="h-80 flex overflow-hidden">
                 <RotorSVG params={params} />
               </GlassCard>
               <RotorInfoCard
@@ -67,7 +67,7 @@ export function AppShell() {
             <div className="flex flex-col gap-4">
               <GlassCard
                 key={`chart-${selectedModel}`}
-                className="h-96 lg:h-[500px] transition-opacity duration-150"
+                className="h-80 transition-opacity duration-150"
               >
                 <AngleChart data={curveData} />
               </GlassCard>
