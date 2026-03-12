@@ -15,7 +15,7 @@ export function AppShell() {
   const [showParamsDrawer, setShowParamsDrawer] = useState(false);
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-b from-blue-950 via-blue-900 to-slate-900">
+    <div className="flex flex-col h-screen bg-white">
       <TopBar />
 
       <div className="flex flex-1 overflow-hidden">
@@ -31,8 +31,8 @@ export function AppShell() {
               onClick={() => setActiveTab('rotor')}
               className={`px-6 py-2 rounded-lg font-semibold transition-all ${
                 activeTab === 'rotor'
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/40'
-                  : 'bg-white/10 text-slate-300 hover:bg-white/20'
+                  ? 'bg-slate-900 text-white shadow-md'
+                  : 'bg-slate-50 text-slate-700 border border-slate-200 hover:bg-slate-100'
               }`}
             >
               Rotor View
@@ -41,8 +41,8 @@ export function AppShell() {
               onClick={() => setActiveTab('chart')}
               className={`px-6 py-2 rounded-lg font-semibold transition-all ${
                 activeTab === 'chart'
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/40'
-                  : 'bg-white/10 text-slate-300 hover:bg-white/20'
+                  ? 'bg-slate-900 text-white shadow-md'
+                  : 'bg-slate-50 text-slate-700 border border-slate-200 hover:bg-slate-100'
               }`}
             >
               Angular Voltage
@@ -89,7 +89,7 @@ export function AppShell() {
         <div className="lg:hidden fixed bottom-6 right-6 z-40">
           <button
             onClick={() => setShowParamsDrawer(!showParamsDrawer)}
-            className="px-4 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg shadow-blue-500/50 hover:bg-blue-700 transition-all"
+            className="px-4 py-3 rounded-full bg-slate-900 text-white font-semibold shadow-lg hover:bg-slate-800 transition-all"
           >
             ⚙ Params
           </button>

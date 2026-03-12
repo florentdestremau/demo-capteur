@@ -77,7 +77,7 @@ export function RotorInfoCard({
             Model Characteristics
           </h3>
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400 text-cyan-300 text-sm font-semibold">
+            <span className="px-3 py-1 rounded-full bg-slate-100 border border-slate-300 text-cyan-300 text-sm font-semibold">
               Model {model}
             </span>
             <span className="text-xs text-slate-400">
@@ -93,7 +93,7 @@ export function RotorInfoCard({
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">
               Sensitivity
             </p>
-            <p className="text-2xl font-bold text-blue-300">{sensitivity}</p>
+            <p className="text-2xl font-bold text-slate-900">{sensitivity}</p>
             <p className="text-xs text-slate-500">mV/°</p>
           </div>
 
@@ -102,7 +102,7 @@ export function RotorInfoCard({
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">
               Linearity Error
             </p>
-            <p className="text-2xl font-bold text-blue-300">
+            <p className="text-2xl font-bold text-slate-900">
               {linearityError}
             </p>
             <p className="text-xs text-slate-500">%</p>
@@ -113,7 +113,7 @@ export function RotorInfoCard({
             <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">
               Angular Range
             </p>
-            <p className="text-2xl font-bold text-blue-300">0° – 360°</p>
+            <p className="text-2xl font-bold text-slate-900">0° – 360°</p>
             <p className="text-xs text-slate-500">full rotation</p>
           </div>
         </div>

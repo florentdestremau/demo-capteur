@@ -62,7 +62,7 @@ export function StatsPanel({ data, params }: StatsPanelProps) {
         {/* Peak Voltage */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-slate-400">Peak Voltage</p>
-          <p className="text-2xl font-bold text-blue-300">
+          <p className="text-2xl font-bold text-slate-900">
             {maxVoltage.toFixed(2)}
           </p>
           <p className="text-xs text-slate-500">mV</p>
@@ -71,7 +71,7 @@ export function StatsPanel({ data, params }: StatsPanelProps) {
         {/* Min Voltage */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-slate-400">Min Voltage</p>
-          <p className="text-2xl font-bold text-blue-300">
+          <p className="text-2xl font-bold text-slate-900">
             {minVoltage.toFixed(2)}
           </p>
           <p className="text-xs text-slate-500">mV</p>
@@ -82,7 +82,7 @@ export function StatsPanel({ data, params }: StatsPanelProps) {
           <p className="text-sm font-medium text-slate-400">
             Peak-to-Peak
           </p>
-          <p className="text-2xl font-bold text-blue-300">
+          <p className="text-2xl font-bold text-slate-900">
             {peakToPeak.toFixed(2)}
           </p>
           <p className="text-xs text-slate-500">mV</p>
@@ -91,14 +91,14 @@ export function StatsPanel({ data, params }: StatsPanelProps) {
         {/* Sensitivity */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-slate-400">Sensitivity</p>
-          <p className="text-2xl font-bold text-blue-300">{sensitivity}</p>
+          <p className="text-2xl font-bold text-slate-900">{sensitivity}</p>
           <p className="text-xs text-slate-500">mV/°</p>
         </div>
 
         {/* Linearity Error */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-slate-400">Linearity Error</p>
-          <p className="text-2xl font-bold text-blue-300">
+          <p className="text-2xl font-bold text-slate-900">
             {linearityError}
           </p>
           <p className="text-xs text-slate-500">%</p>

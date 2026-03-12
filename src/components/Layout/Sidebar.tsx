@@ -54,11 +54,11 @@ export function Sidebar({ position }: SidebarProps) {
 
   return (
     <div
-      className={`w-72 border-white/10 bg-white/5 backdrop-blur-md p-6 space-y-6 overflow-y-auto ${
+      className={`w-72 border-slate-200 bg-slate-50 p-6 space-y-6 overflow-y-auto ${
         position === 'left' ? 'border-r' : 'border-l'
       }`}
     >
-      <h2 className="text-sm font-bold text-blue-300 uppercase tracking-widest mb-4">
+      <h2 className="text-sm font-bold text-slate-900 uppercase tracking-widest mb-4">
         {position === 'left' ? 'Geometry & Magnetics' : 'Electrical & Rotation'}
       </h2>
 
@@ -74,7 +74,7 @@ export function Sidebar({ position }: SidebarProps) {
                   <label className="text-sm font-medium text-slate-300">
                     {PARAM_LABELS[paramName]}
                   </label>
-                  <span className="text-sm font-mono text-blue-300">
+                  <span className="text-sm font-mono text-slate-700">
                     {params[paramName as keyof typeof params].toFixed(
                       PARAM_CONFIGS[paramName].step < 1 ? 1 : 0
                     )}{' '}

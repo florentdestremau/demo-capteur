@@ -4,28 +4,28 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-b from-blue-950 via-blue-900 to-slate-900 text-slate-100 antialiased;
+    @apply bg-white text-slate-900 antialiased;
   }
 
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl;
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm;
   }
 
   .slider {
-    @apply w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer;
+    @apply w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer;
   }
 
   .slider::-webkit-slider-thumb {
-    @apply appearance-none w-5 h-5 rounded-full bg-blue-400 cursor-pointer shadow-lg shadow-blue-400/40;
+    @apply appearance-none w-5 h-5 rounded-full bg-slate-700 cursor-pointer shadow-md shadow-slate-300;
   }
 
   .slider::-moz-range-thumb {
-    @apply w-5 h-5 rounded-full bg-blue-400 cursor-pointer shadow-lg shadow-blue-400/40 border-0;
+    @apply w-5 h-5 rounded-full bg-slate-700 cursor-pointer shadow-md shadow-slate-300 border-0;
   }
 }

@@ -29,18 +29,18 @@ export function AngleChart({ data }: AngleChartProps) {
           data={data}
           margin={{ top: 20, right: 30, left: 60, bottom: 60 }}
         >
-          {/* Dark background */}
+          {/* Light background */}
           <defs>
             <linearGradient id="chartBg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="rgba(15, 23, 42, 0.4)" />
-              <stop offset="100%" stopColor="rgba(15, 23, 42, 0.2)" />
+              <stop offset="0%" stopColor="rgba(248, 250, 252, 1)" />
+              <stop offset="100%" stopColor="rgba(248, 250, 252, 1)" />
             </linearGradient>
           </defs>
 
           {/* Grid with subtle gray lines */}
           <CartesianGrid
             strokeDasharray="3 3"
-            stroke="rgba(148, 163, 184, 0.2)"
+            stroke="rgba(203, 213, 225, 0.5)"
             vertical={true}
             horizontalPoints={[yMin, (yMin + yMax) / 2, yMax]}
           />
@@ -54,10 +54,10 @@ export function AngleChart({ data }: AngleChartProps) {
               value: 'Angle (°)',
               position: 'insideBottomRight',
               offset: -10,
-              fill: 'rgb(226, 232, 240)',
+              fill: 'rgb(51, 65, 85)',
             }}
-            tick={{ fill: 'rgb(148, 163, 184)' }}
-            axisLine={{ stroke: 'rgba(148, 163, 184, 0.3)' }}
+            tick={{ fill: 'rgb(107, 114, 128)' }}
+            axisLine={{ stroke: 'rgba(107, 114, 128, 0.4)' }}
           />
 
           <YAxis
@@ -67,19 +67,19 @@ export function AngleChart({ data }: AngleChartProps) {
               angle: -90,
               position: 'insideLeft',
               offset: 10,
-              fill: 'rgb(226, 232, 240)',
+              fill: 'rgb(51, 65, 85)',
             }}
-            tick={{ fill: 'rgb(148, 163, 184)' }}
-            axisLine={{ stroke: 'rgba(148, 163, 184, 0.3)' }}
+            tick={{ fill: 'rgb(107, 114, 128)' }}
+            axisLine={{ stroke: 'rgba(107, 114, 128, 0.4)' }}
           />
 
           {/* Tooltip */}
           <Tooltip
             contentStyle={{
-              backgroundColor: 'rgba(15, 23, 42, 0.9)',
-              border: '1px solid rgba(34, 211, 238, 0.3)',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              border: '1px solid rgb(226, 232, 240)',
               borderRadius: '8px',
-              color: 'rgb(226, 232, 240)',
+              color: 'rgb(51, 65, 85)',
             }}
             formatter={(value) => [
               typeof value === 'number' ? value.toFixed(2) : value,
@@ -92,7 +92,7 @@ export function AngleChart({ data }: AngleChartProps) {
           <Line
             type="monotone"
             dataKey="voltage"
-            stroke="#3b82f6"
+            stroke="#1f2937"
             strokeWidth={2}
             dot={false}
             isAnimationActive={true}

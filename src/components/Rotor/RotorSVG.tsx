@@ -19,14 +19,14 @@ export function RotorSVG({ params }: RotorSVGProps) {
         <defs>
           {/* Gradient for rotor disc */}
           <radialGradient id="rotorGradient" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#374151" />
-            <stop offset="100%" stopColor="#1e293b" />
+            <stop offset="0%" stopColor="#d1d5db" />
+            <stop offset="100%" stopColor="#9ca3af" />
           </radialGradient>
 
           {/* Gradient for magnetic pole pair */}
           <linearGradient id="poleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3b82f6" />
-            <stop offset="100%" stopColor="#1e40af" />
+            <stop offset="0%" stopColor="#9ca3af" />
+            <stop offset="100%" stopColor="#6b7280" />
           </linearGradient>
 
           {/* Arrow markers for wires */}
@@ -61,7 +61,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             orient="auto"
             markerUnits="strokeWidth"
           >
-            <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
+            <path d="M0,0 L0,6 L9,3 z" fill="#6b7280" />
           </marker>
           <marker
             id="arrowGray2"
@@ -77,7 +77,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
         </defs>
 
         {/* Background */}
-        <rect width="500" height="500" fill="rgba(15, 23, 42, 0.5)" />
+        <rect width="500" height="500" fill="white" />
 
         {/* Full rotation path (360° arc) */}
         <circle
@@ -85,7 +85,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
           cy="250"
           r="140"
           fill="none"
-          stroke="#ffffff"
+          stroke="#4b5563"
           strokeWidth="1"
           strokeDasharray="2,4"
           opacity="0.2"
@@ -99,7 +99,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             cy="0"
             r="140"
             fill="url(#rotorGradient)"
-            stroke="#3b82f6"
+            stroke="#6b7280"
             strokeWidth="2"
             opacity="0.6"
           />
@@ -136,7 +136,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
           </g>
 
           {/* Center point indicator */}
-          <circle cx="0" cy="0" r="4" fill="#ffffff" opacity="0.8" />
+          <circle cx="0" cy="0" r="4" fill="#4b5563" opacity="0.8" />
         </g>
 
         {/* Rotation indicator arc at targetAngle */}
@@ -155,7 +155,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
                 <path
                   d={`M ${startX},${startY} A 25,25 0 0,1 ${endX},${endY}`}
                   fill="none"
-                  stroke="#ffffff"
+                  stroke="#4b5563"
                   strokeWidth="2"
                   opacity="0.7"
                 />
@@ -165,7 +165,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
                   },${arrowY - 8 * Math.sin(angleRad + 0.3)} ${
                     arrowX - 8 * Math.cos(angleRad - 0.3)
                   },${arrowY - 8 * Math.sin(angleRad - 0.3)}`}
-                  fill="#ffffff"
+                  fill="#4b5563"
                   opacity="0.7"
                 />
               </>
@@ -181,7 +181,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             width="20"
             height="12"
             fill="#475569"
-            stroke="#3b82f6"
+            stroke="#6b7280"
             strokeWidth="1.5"
           />
           <text
@@ -189,7 +189,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y="2"
             textAnchor="middle"
             fontSize="6"
-            fill="#e2e8f0"
+            fill="#374151"
             fontWeight="bold"
             letterSpacing="0.5"
           >
@@ -245,7 +245,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
                 {/* OUT (Blue) */}
                 <path
                   d={`M ${wireStartX},256 L ${wireBendX},256 L ${wireBendX},320`}
-                  stroke="#3b82f6"
+                  stroke="#6b7280"
                   strokeWidth="1.5"
                   fill="none"
                   markerEnd="url(#arrowBlue)"
@@ -254,7 +254,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
                   x={wireBendX + 20}
                   y={330}
                   fontSize="10"
-                  fill="#3b82f6"
+                  fill="#6b7280"
                   fontWeight="bold"
                 >
                   OUT
@@ -290,7 +290,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y1={250}
             x2={250 + 140 + airGapPixels}
             y2={250}
-            stroke="#ffffff"
+            stroke="#4b5563"
             strokeWidth="1"
             strokeDasharray="3,3"
             opacity="0.6"
@@ -300,7 +300,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y1={235}
             x2={250 + 140}
             y2={265}
-            stroke="#ffffff"
+            stroke="#4b5563"
             strokeWidth="1"
             opacity="0.6"
           />
@@ -309,7 +309,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y1={235}
             x2={250 + 140 + airGapPixels}
             y2={265}
-            stroke="#ffffff"
+            stroke="#4b5563"
             strokeWidth="1"
             opacity="0.6"
           />
@@ -318,7 +318,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y={225}
             textAnchor="middle"
             fontSize="9"
-            fill="#ffffff"
+            fill="#4b5563"
             fontWeight="bold"
           >
             Air Gap {params.airGap.toFixed(1)}mm
@@ -330,7 +330,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y1={250}
             x2={250 + 120}
             y2={250 - 70}
-            stroke="#a78bfa"
+            stroke="#6b7280"
             strokeWidth="1.5"
             strokeDasharray="4,4"
             opacity="0.5"
@@ -339,7 +339,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             x={320}
             y={160}
             fontSize="10"
-            fill="#a78bfa"
+            fill="#6b7280"
             fontWeight="bold"
           >
             R = {params.rotorRadius}mm
@@ -351,7 +351,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y={100}
             textAnchor="middle"
             fontSize="10"
-            fill="#f472b6"
+            fill="#6b7280"
             fontWeight="bold"
           >
             B = {params.fieldStrength}mT
@@ -363,7 +363,7 @@ export function RotorSVG({ params }: RotorSVGProps) {
             y={100}
             textAnchor="middle"
             fontSize="9"
-            fill="#86efac"
+            fill="#6b7280"
             fontWeight="bold"
           >
             {params.rpm} RPM
