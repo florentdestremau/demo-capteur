@@ -24,7 +24,7 @@ export function AppShell() {
           <Sidebar position="left" />
         </div>
 
-        <div className="flex-1 flex flex-col p-4 lg:p-6 gap-4 overflow-hidden">
+        <div className="flex-1 flex flex-col p-4 lg:p-6 gap-4 overflow-y-auto">
           {/* Tab Switcher */}
           <div className="flex gap-2 flex-shrink-0">
             <button
@@ -49,33 +49,29 @@ export function AppShell() {
             </button>
           </div>
 
-          {/* Main Content Area - No scrolling, fits on screen */}
+          {/* Main Content Area - Responsive, scrolls only if needed */}
           {activeTab === 'rotor' && (
-            <div className="flex flex-col gap-4 flex-1 overflow-hidden">
-              <GlassCard className="flex-1 min-h-0">
+            <div className="flex flex-col gap-4">
+              <GlassCard className="h-96 lg:h-[500px]">
                 <RotorSVG params={params} />
               </GlassCard>
-              <div className="flex-shrink-0">
-                <RotorInfoCard
-                  curveData={curveData}
-                  params={params}
-                  model={selectedModel}
-                />
-              </div>
+              <RotorInfoCard
+                curveData={curveData}
+                params={params}
+                model={selectedModel}
+              />
             </div>
           )}
 
           {activeTab === 'chart' && (
-            <div className="flex flex-col gap-4 flex-1 overflow-hidden">
+            <div className="flex flex-col gap-4">
               <GlassCard
                 key={`chart-${selectedModel}`}
-                className="flex-1 min-h-0 transition-opacity duration-150"
+                className="h-96 lg:h-[500px] transition-opacity duration-150"
               >
                 <AngleChart data={curveData} />
               </GlassCard>
-              <div className="flex-shrink-0 max-h-40 overflow-hidden">
-                <StatsPanel data={curveData} params={params} />
-              </div>
+              <StatsPanel data={curveData} params={params} />
             </div>
           )}
         </div>
